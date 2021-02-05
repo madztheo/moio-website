@@ -1,0 +1,30 @@
+footer.website__footer {
+  background-color: #242424;
+  display: flex;
+  align-items: center;
+  padding: 20px 5%;
+  position: relative;
+  z-index: 2;
+
+  div.logo__container {
+    display: flex;
+    align-items: center;
+    img.logo {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+    div.divider {
+      height: 15px;
+      width: 1px;
+      margin: 0 10px;
+      background-color: white;
+    }
+    p.copyright {
+      font-weight: 400;
+      color: white;
+      margin: 0;
+      font-size: 15px;
+    }
+  }
+}

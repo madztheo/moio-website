@@ -1,0 +1,121 @@
+@import "../../styles/variables.scss";
+
+section.cover__container {
+  width: 100%;
+  min-height: 80vh;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  display: flex;
+  @media (max-width: $tabletWidth) {
+    flex-direction: column-reverse;
+  }
+  img.bg__logo {
+    position: fixed;
+    object-fit: contain;
+    transform: rotate(-20deg);
+    z-index: 1;
+  }
+  div.left__part {
+    z-index: 2;
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    div.cover__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p {
+        text-align: center;
+        margin: 0;
+        &.title {
+          font-size: 70px;
+          font-weight: 800;
+          color: #242424;
+        }
+        &.subtitle {
+          max-width: 400px;
+          font-size: 17px;
+          b {
+            font-weight: 700;
+          }
+        }
+      }
+      div.buttons__container {
+        display: flex;
+        margin-top: 20px;
+        button {
+          background-color: transparent;
+          border: none;
+          border-radius: 30px;
+          padding: 10px 25px;
+          margin: 0 5px;
+          color: white;
+          font-size: 18px;
+          font-weight: 700;
+          cursor: pointer;
+          transition: 200ms ease;
+          outline: transparent;
+          &:active {
+            transform: scale(0.95);
+          }
+          &.explore__button {
+            background-color: black;
+            &:hover {
+              background-color: scale-color($color: #000000, $lightness: 30%);
+            }
+          }
+          &.contact__button {
+            background-color: $buildColor;
+            &:hover {
+              background-color: scale-color(
+                $color: $buildColor,
+                $lightness: -30%
+              );
+            }
+          }
+        }
+      }
+    }
+    div.metrics__container {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 100px;
+      @media (max-width: $mobileWidth) {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+      }
+      div.metrics {
+        margin: 0 30px;
+        display: flex;
+        align-items: center;
+        @media (max-width: $mobileWidth) {
+          margin: 20px 0;
+        }
+        i {
+          font-size: 20px;
+          margin-right: 15px;
+        }
+        div.texts {
+          p {
+            text-align: center;
+            margin: 0;
+            font-size: 20px;
+            &.number {
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+  div.right__part {
+    flex: 1;
+    z-index: 2;
+    @media (max-width: $tabletWidth) {
+      display: none;
+    }
+  }
+}

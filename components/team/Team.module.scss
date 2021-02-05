@@ -1,0 +1,57 @@
+@import "../../styles/variables.scss";
+
+section.team__container {
+  background-color: $buildColor;
+  position: relative;
+  z-index: 2;
+  padding: 50px 10%;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  p.team__title {
+    margin: 0;
+    font-size: 75px;
+    font-weight: 800;
+    color: white;
+    @media (max-width: $tabletWidth) {
+      text-align: center;
+      font-size: 50px;
+    }
+  }
+  div.team__details {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    @media (max-width: $tabletWidth) {
+      flex-direction: column;
+    }
+    p.team__description {
+      margin: 0 0 0 70px;
+      color: white;
+      font-size: 20px;
+      @media (max-width: $tabletWidth) {
+        margin: 20px 0 0 0;
+      }
+    }
+  }
+  button.start__button {
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    margin: 20px 5px 0 5px;
+    color: $buildColor;
+    font-size: 20px;
+    font-weight: 700;
+    align-self: flex-end;
+    cursor: pointer;
+    transition: 200ms ease;
+    outline: transparent;
+    &:active {
+      transform: scale(0.95);
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+section.tech__container {
+  background-color: #242424;
+  display: flex;
+  align-items: center;
+  padding: 40px 10% 10px 10%;
+  position: relative;
+  z-index: 2;
+  flex-wrap: wrap;
+  img.tech__logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin: 0 30px 30px 0;
+  }
+}

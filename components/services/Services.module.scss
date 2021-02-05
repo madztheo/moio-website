@@ -1,0 +1,111 @@
+@import "../../styles/variables.scss";
+
+section.services__container {
+  min-height: 20vh;
+  display: flex;
+  position: relative;
+  z-index: 2;
+  @media (max-width: $tabletWidth) {
+    flex-direction: column;
+  }
+  div.design__part,
+  div.build__part,
+  div.ads__part {
+    background-image: url("/images/pattern.png");
+    background-repeat: no-repeat;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    box-sizing: border-box;
+
+    div.logo__container {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      img.logo {
+        margin-left: 20px;
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+      }
+      div.divider {
+        height: 20px;
+        width: 1px;
+        margin: 0 10px;
+        background-color: white;
+      }
+      p.label {
+        font-weight: 800;
+        color: white;
+        margin: 0;
+        font-size: 20px;
+      }
+    }
+    div.inner__content {
+      align-self: center;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: auto 0;
+      display: flex;
+      margin-top: 20px;
+      padding: 0 20px;
+      box-sizing: border-box;
+      width: 100%;
+      p.description {
+        margin: 0;
+        color: white;
+        max-width: 300px;
+        font-size: 20px;
+        font-weight: 800;
+        white-space: pre-wrap;
+      }
+      button.contact__button {
+        background-color: white;
+        border: none;
+        border-radius: 30px;
+        padding: 15px 30px;
+        margin: 0 5px;
+        color: white;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: 200ms ease;
+        outline: transparent;
+        &:active {
+          transform: scale(0.95);
+        }
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  div.design__part {
+    background-color: $designColor;
+    div.inner__content {
+      button.contact__button {
+        outline: transparent;
+        color: $designColor;
+      }
+    }
+  }
+  div.build__part {
+    background-color: $buildColor;
+    div.inner__content {
+      button.contact__button {
+        outline: transparent;
+        color: $buildColor;
+      }
+    }
+  }
+  div.ads__part {
+    background-color: $adsColor;
+    div.inner__content {
+      button.contact__button {
+        outline: transparent;
+        color: $adsColor;
+      }
+    }
+  }
+}
